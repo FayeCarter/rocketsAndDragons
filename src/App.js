@@ -5,10 +5,11 @@ import { Button } from "@mrshmllw/smores-react";
 function App() {
 
   const [rockets, setRockets] = useState([])
+  const [dragons, setDragons] = useState([])
 
   const getInfo = async (vehicle) => {
     const data = await getData(vehicle);
-    setRockets(data);
+    vehicle === "rockets" ? setRockets(data) : setDragons(data);
   }
 
   return (
@@ -22,13 +23,18 @@ function App() {
       </Button>
       <Button 
         color="green"
-        handleClick={() => getInfo("rockets")}
+        handleClick={() => getInfo("dragons")}
       >
         Get Dragons
       </Button>
       {rockets.map((rocket, index) => {
         return (
           <h2 key={index} className="rocket">{rocket.rocket_name}</h2>
+        )
+      })}
+      {dragons.map((dragon, index) => {
+        return (
+          <h2 key={index} className="dragon">{dragon.name}</h2>
         )
       })}
     </div>

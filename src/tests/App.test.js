@@ -5,7 +5,7 @@ import waitUntil from 'async-wait-until';
 import { act } from 'react-dom/test-utils';
 
 import App from "../App";
-import { rocketsMock } from './fixtures/APIMocks';
+import { rocketsMock, dragonsMock } from './fixtures/APIMocks';
 
 jest.mock('axios');
 
@@ -41,6 +41,21 @@ describe("App testing", () => {
     it("`Get Dragons` button is rendered`", () => {
       const wrapper = mount(<App />)
       expect(wrapper.find("button[children='Get Dragons']").text()).toEqual("Get Dragons");
+    });
+
+    it("When `Get Dragons` button is pressed, dragon names are rendered`", async() => {
+      const wrapper = mount(<App />)
+
+      const response = dragonsMock;
+      axios.get.mockResolvedValue(response);
+
+      await act(async () => {
+        wrapper.find("button[children='Get Dragons']").simulate("click")
+        await waitUntil(() => wrapper.find(".dragon"))
+      });
+
+      expect(wrapper.text()).toContain("Dragon 1");
+      expect(wrapper.text()).toContain("Dragon 2");
     });
   });
 })
