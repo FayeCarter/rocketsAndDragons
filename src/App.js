@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { getData } from "./services/API";
 import { Button } from "@mrshmllw/smores-react";
+
+import { getData } from "./services/API";
+
 import ListItem from "./components/ListItem";
 import Rocket from "./components/Rocket";
 import Dragon from "./components/Dragon";
+
+import { StyledApp, StyledResults } from './styles/App.styles';
 
 function App() {
 
@@ -28,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <h1>Rockets and Dragons</h1>
       <Button 
         color="green"
@@ -42,24 +46,28 @@ function App() {
       >
         Get Dragons
       </Button>
-      {data.map((item, index) => {
-        return (
-          <div 
-            key={index} 
-            onClick={() => handleClick(item) } 
-          >
-            <ListItem 
-              
-              className={vehicle}
-              type={vehicle} 
-              data={item}
-            />
-          </div>
-        )
-      })}
+      <StyledResults>
+        <div>
+          {data.map((item, index) => {
+            return (
+              <div 
+                key={index} 
+                onClick={() => handleClick(item) } 
+              >
+                <ListItem 
+                  
+                  className={vehicle}
+                  type={vehicle} 
+                  data={item}
+                />
+              </div>
+            )
+          })}
+        </div>
       { clicked && vehicle === "rockets" ? <Rocket data={ item } /> : null}
       { clicked && vehicle === "dragons" ? <Dragon data={ item } /> : null}
-    </div>
+      </ StyledResults>
+    </ StyledApp>
   );
 }
 
