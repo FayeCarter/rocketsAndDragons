@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marshmallow Frontend Test
 
-## Available Scripts
+Your task is to create a Javascript app that provides a brief overview of SpaceX's _rockets_ and _dragons_. 🚀 🛰
 
-In the project directory, you can run:
+## What we'd like you to do
 
-### `yarn start`
+Build a React app with the functionality that meets the following requirements:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Fetch and render a list of _rockets_ or _dragons_ from SpaceX's API.
+- Show extended information about a selected list item in a separate box, modal or page.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+> Question: "How should I position the list items?", "What data should I show in the full item view", "Do I need to bother with UI/UX?"
 
-### `yarn test`
+**Answer:** Completely up to you.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This task shouldn't take you longer than 2 or 3 hours to complete. However, you can spend as long as you want on it.
 
-### `yarn build`
+## Where do I find these rockets and dragons you speak of?
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please refer to [SpaceX's open API](https://docs.spacexdata.com/) for this task. The `/rockets` and `/dragons` endpoints should provide the necessary data.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## What should the UI look like?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+What the UI looks like is completely up to you, however we suggest that it contains:
 
-### `yarn eject`
+1. Buttons or tabs to switch between rockets and dragons.
+2. A grid representation of the list.
+3. A single item view with an extended description (containing an image, name, etc.).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="./testUI.jpg" height="350">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> We have no specific styling requirements, you have **complete** freedom over what the UI looks like
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## What should I use to build the app?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Feel free to use **any** tools that you are most efficient with:
 
-## Learn More
+Whether it's a `create-react-app` in [Codesandbox](https://codesandbox.io/) or a custom React build.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Get data using native [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) or ['axios'](https://github.com/axios/axios).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can style the UI using an existing CSS framework like `Bootstrap`, you can use [Styled Components](https://styled-components.com/), or write your own vanilla CSS. Use whatever method of applying CSS you are comfortable with.
 
-### Code Splitting
+### Bonus points
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+It would impress us if you used any of the following technoliogies (but it is not required!):
 
-### Analyzing the Bundle Size
+- React Hooks
+- Typescript
+- Redux (and Redux hooks)
+- Custom webpack build
+- Tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## How do I submit my app?
 
-### Making a Progressive Web App
+- Send us a link to the source code (in a public Github repository or an online code editor).
+- Brief instructions on how to run the app.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+> !! No mysterious ZIP files sent over email please!
 
-### Advanced Configuration
+## How we will evaluate your code
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+When we evaluate your code we will consider:
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Code organisation
+- Quality
+- Readability
