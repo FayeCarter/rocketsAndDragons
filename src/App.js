@@ -29,12 +29,22 @@ function App() {
       </Button>
       {rockets.map((rocket, index) => {
         return (
-          <h2 key={index} className="rocket">{rocket.rocket_name}</h2>
+          <ListItem 
+            key={index} 
+            className="rocket" 
+            name={rocket.rocket_name} 
+            description={rocket.description}
+          />
         )
       })}
       {dragons.map((dragon, index) => {
         return (
-          <ListItem key={index} className="dragon" name={dragon.name} description={dragon.description}/>
+          <ListItem 
+            key={index} 
+            className="dragon" 
+            name={dragon.name} 
+            description={dragon.description}
+          />
         )
       })}
     </div>
