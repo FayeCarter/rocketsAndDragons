@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import { getData } from "./services/API";
 import { Button } from "@mrshmllw/smores-react";
 import ListItem from "./components/ListItem";
+
 function App() {
 
-  const [rockets, setRockets] = useState([])
-  const [dragons, setDragons] = useState([])
+  const [data, setData] = useState([])
+  const [vehicle, setVehicle] = useState("")
 
   const getInfo = async (vehicle) => {
+    setData([]);
     const data = await getData(vehicle);
-    vehicle === "rockets" ? setRockets(data) : setDragons(data);
+    setVehicle(vehicle);
+    setData(data);
   }
 
   return (
@@ -27,25 +30,13 @@ function App() {
       >
         Get Dragons
       </Button>
-      {rockets.map((rocket, index) => {
+      {data.map((item, index) => {
         return (
           <ListItem 
             key={index} 
-            className="rocket" 
-            name={rocket.rocket_name} 
-            description={rocket.description}
-            image={rocket.flickr_images[1]}
-          />
-        )
-      })}
-      {dragons.map((dragon, index) => {
-        return (
-          <ListItem 
-            key={index} 
-            className="dragon" 
-            name={dragon.name} 
-            description={dragon.description}
-            image={dragon.flickr_images[1]}
+            className={vehicle}
+            type={vehicle} 
+            data={item}
           />
         )
       })}
