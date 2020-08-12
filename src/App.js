@@ -15,6 +15,10 @@ function App() {
     setData(data);
   }
 
+  const handleClick = () => {
+    console.log("HEEEy")
+  }
+
   return (
     <div className="App">
       <h1>Rockets and Dragons</h1>
@@ -32,12 +36,17 @@ function App() {
       </Button>
       {data.map((item, index) => {
         return (
-          <ListItem 
+          <div 
             key={index} 
-            className={vehicle}
-            type={vehicle} 
-            data={item}
-          />
+            onClick={ handleClick } 
+          >
+            <ListItem 
+              
+              className={vehicle}
+              type={vehicle} 
+              data={item}
+            />
+          </div>
         )
       })}
     </div>

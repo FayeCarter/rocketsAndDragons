@@ -10,12 +10,10 @@ function ListItem({ type, data }) {
     type === "rockets" ? setName(data.rocket_name) : setName(data.name);
   }, []);
 
-  const handleClick = () => {
-    console.log("HEEEy")
-  }
+  
 
   return (
-    <div onClick={ handleClick } >
+    <div >
       <Card>
         <h1>{name}</h1>
         <p>{description}</p>
