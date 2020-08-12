@@ -1,5 +1,9 @@
 # Marshmallow Frontend Test
 
+## Current Status
+
+Deployed [here](rockets-and-dragons.surge.sh/)
+
 Your task is to create a Javascript app that provides a brief overview of SpaceX's _rockets_ and _dragons_. 🚀 🛰
 
 ## What we'd like you to do
