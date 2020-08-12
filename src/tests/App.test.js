@@ -58,4 +58,4 @@ describe("App testing", () => {
       expect(wrapper.text()).toContain("Dragon 2");
     });
   });
-})
+});

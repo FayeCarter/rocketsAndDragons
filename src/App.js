@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { getData } from "./services/API";
 import { Button } from "@mrshmllw/smores-react";
-
+import ListItem from "./components/ListItem";
 function App() {
 
   const [rockets, setRockets] = useState([])
@@ -34,7 +34,7 @@ function App() {
       })}
       {dragons.map((dragon, index) => {
         return (
-          <h2 key={index} className="dragon">{dragon.name}</h2>
+          <ListItem key={index} className="dragon" name={dragon.name} />
         )
       })}
     </div>
