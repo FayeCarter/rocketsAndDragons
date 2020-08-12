@@ -19,13 +19,13 @@ function ListItem({ type, data }) {
           <h2>{name}</h2>
           <p>{description}</p>
           <img src={images[1]} alt="Item" />
+          <Icon 
+            color="pink6"
+            render="arrow"
+            rotate={180}
+            size={38}
+          />
         </StyledItem>
-        <Icon 
-          color="pink6"
-          render="arrow"
-          rotate={180}
-          size={38}
-        />
       </Card>
     </div>
   );

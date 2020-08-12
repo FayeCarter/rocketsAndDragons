@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const StyledItem= styled.div`
 
+padding-bottom: 20px;
+
   h2 {
     text-align: center;
   }
@@ -12,5 +14,17 @@ export const StyledItem= styled.div`
 
   img {
     max-width: 302px;
+  }
+
+  span {
+    float: right;
+  }
+
+  &:hover {
+    span {
+      path {
+        fill: #AB1D20;
+      }
+    }
   }
 `;
