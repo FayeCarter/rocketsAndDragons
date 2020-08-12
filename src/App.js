@@ -34,6 +34,7 @@ function App() {
             className="rocket" 
             name={rocket.rocket_name} 
             description={rocket.description}
+            image={rocket.flickr_images[1]}
           />
         )
       })}
@@ -44,6 +45,7 @@ function App() {
             className="dragon" 
             name={dragon.name} 
             description={dragon.description}
+            image={dragon.flickr_images[1]}
           />
         )
       })}

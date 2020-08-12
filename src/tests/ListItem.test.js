@@ -15,4 +15,11 @@ describe("ListItem testing", () => {
 
     expect(wrapper.text()).toContain(description);
   });
+
+  it("renders Item's passed image", () => {
+    const image = "Rocket Description";
+    const wrapper = mount(<ListItem image={image} />);
+
+    expect(wrapper.find("img").prop("src")).toEqual(image);
+  });
 });
