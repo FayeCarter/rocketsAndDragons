@@ -7,7 +7,7 @@ import ListItem from "./components/ListItem";
 import Rocket from "./components/Rocket";
 import Dragon from "./components/Dragon";
 
-import { StyledApp, StyledResults } from './styles/App.styles';
+import { GlobalStyle, StyledApp, StyledResults } from './styles/App.styles';
 
 function App() {
 
@@ -33,19 +33,22 @@ function App() {
 
   return (
     <StyledApp className="App">
+      <GlobalStyle />
       <h1>Rockets and Dragons</h1>
-      <Button 
-        color="green"
-        handleClick={() => getInfo("rockets")}
-      >
-        Get Rockets
-      </Button>
-      <Button 
-        color="green"
-        handleClick={() => getInfo("dragons")}
-      >
-        Get Dragons
-      </Button>
+      <div className="controls">
+        <Button 
+          color="green"
+          handleClick={() => getInfo("rockets")}
+        >
+          Get Rockets
+        </Button>
+        <Button 
+          color="green"
+          handleClick={() => getInfo("dragons")}
+        >
+          Get Dragons
+        </Button>
+      </div>
       <StyledResults>
         <div>
           {data.map((item, index) => {
