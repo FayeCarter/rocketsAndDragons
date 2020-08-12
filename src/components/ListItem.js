@@ -1,15 +1,12 @@
 import React from "react";
 import { Card, Text } from "@mrshmllw/smores-react";
 
-function ListItem({ name }) {
+function ListItem({ name, description }) {
 
   return (
     <Card >
-      <Text
-        type="h1"
-      >
-        {name}
-      </Text>
+      <h1>{name}</h1>
+      <p>{description}</p>
     </Card>
   );
 }

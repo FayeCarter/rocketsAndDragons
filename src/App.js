@@ -34,7 +34,7 @@ function App() {
       })}
       {dragons.map((dragon, index) => {
         return (
-          <ListItem key={index} className="dragon" name={dragon.name} />
+          <ListItem key={index} className="dragon" name={dragon.name} description={dragon.description}/>
         )
       })}
     </div>
