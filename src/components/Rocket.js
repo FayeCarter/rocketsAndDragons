@@ -6,7 +6,7 @@ function Rocket({ data }) {
   const {rocket_name: name, description} = data;
 
   return (
-    <div >
+    <div>
       <Card>
         <h1>{name}</h1>
         <p>{description}</p>

@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { getData } from "./services/API";
 import { Button } from "@mrshmllw/smores-react";
 import ListItem from "./components/ListItem";
+import Rocket from "./components/Rocket";
 
 function App() {
 
   const [data, setData] = useState([])
   const [vehicle, setVehicle] = useState("")
+  const [clicked, setClicked] = useState(false)
+  const [item, setItem] = useState(false)
 
   const getInfo = async (vehicle) => {
     setData([]);
@@ -15,8 +18,11 @@ function App() {
     setData(data);
   }
 
-  const handleClick = () => {
-    console.log("HEEEy")
+  const handleClick = (passedItem) => {
+    console.log("Click")
+    setClicked(true)
+    setItem(passedItem)
+    console.log(vehicle )
   }
 
   return (
@@ -38,7 +44,7 @@ function App() {
         return (
           <div 
             key={index} 
-            onClick={ handleClick } 
+            onClick={() => handleClick(item) } 
           >
             <ListItem 
               
@@ -49,6 +55,7 @@ function App() {
           </div>
         )
       })}
+      { clicked && vehicle === "rockets" ? <Rocket data={ item } /> : null}
     </div>
   );
 }

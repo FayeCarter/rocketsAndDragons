@@ -5,6 +5,7 @@ import waitUntil from 'async-wait-until';
 import { act } from 'react-dom/test-utils';
 
 import App from "../App";
+import Rocket from "../components/Rocket";
 import { rocketsMock, dragonsMock } from './fixtures/APIMocks';
 
 jest.mock('axios');
@@ -35,7 +36,8 @@ describe("App testing", () => {
       expect(wrapper.text()).toContain("Falcon 1");
       expect(wrapper.text()).toContain("Falcon 9");
     });
-  })
+
+  });
 
   describe("Get Dragons", () => {
     it("`Get Dragons` button is rendered`", () => {

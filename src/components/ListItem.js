@@ -8,14 +8,12 @@ function ListItem({ type, data }) {
 
   useEffect(  () => {
     type === "rockets" ? setName(data.rocket_name) : setName(data.name);
-  }, []);
-
-  
+  }, [name]);
 
   return (
     <div >
       <Card>
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <p>{description}</p>
         <img src={images[1]} alt="Item" />
         <Icon 
