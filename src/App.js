@@ -3,6 +3,7 @@ import { getData } from "./services/API";
 import { Button } from "@mrshmllw/smores-react";
 import ListItem from "./components/ListItem";
 import Rocket from "./components/Rocket";
+import Dragon from "./components/Dragon";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
   const [item, setItem] = useState(false)
 
   const getInfo = async (vehicle) => {
+    setClicked(false)
     setData([]);
     const data = await getData(vehicle);
     setVehicle(vehicle);
@@ -56,6 +58,7 @@ function App() {
         )
       })}
       { clicked && vehicle === "rockets" ? <Rocket data={ item } /> : null}
+      { clicked && vehicle === "dragons" ? <Dragon data={ item } /> : null}
     </div>
   );
 }
