@@ -18,7 +18,7 @@ describe("App testing", () => {
   describe("Get Rockets", () => {
     it("`Get Rockets` button is rendered`", () => {
       const wrapper = mount(<App />)
-      expect(wrapper.find("button").text()).toContain("Get rockets");
+      expect(wrapper.find("button[children='Get Rockets']").text()).toEqual("Get Rockets");
     });
 
     it("When `Get Rockets` button is pressed, rocket names are rendered`", async() => {
@@ -28,12 +28,19 @@ describe("App testing", () => {
       axios.get.mockResolvedValue(response);
 
       await act(async () => {
-        wrapper.find("button").simulate("click")
+        wrapper.find("button[children='Get Rockets']").simulate("click")
         await waitUntil(() => wrapper.find(".rocket"))
       });
-      
+
       expect(wrapper.text()).toContain("Falcon 1");
       expect(wrapper.text()).toContain("Falcon 9");
     });
   })
+
+  describe("Get Dragons", () => {
+    it("`Get Dragons` button is rendered`", () => {
+      const wrapper = mount(<App />)
+      expect(wrapper.find("button[children='Get Dragons']").text()).toEqual("Get Dragons");
+    });
+  });
 })

@@ -17,9 +17,14 @@ function App() {
       <Button 
         color="green"
         handleClick={() => getInfo("rockets")}
-        className="rocket-button"
       >
-        Get rockets
+        Get Rockets
+      </Button>
+      <Button 
+        color="green"
+        handleClick={() => getInfo("rockets")}
+      >
+        Get Dragons
       </Button>
       {rockets.map((rocket, index) => {
         return (
