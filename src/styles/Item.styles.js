@@ -13,7 +13,10 @@ padding-bottom: 20px;
   }
 
   img {
-    max-width: 302px;
+    object-fit: cover;
+    height: 250px;
+    max-width: 100%;
+
   }
 
   span {
