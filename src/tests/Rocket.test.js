@@ -30,7 +30,7 @@ describe("Rocket testing", () => {
         "cost": "6700000",
         "success": "40"
       }
-  
+
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo.country);
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo["first-flight"]);
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo.cost);

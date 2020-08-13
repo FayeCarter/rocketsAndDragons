@@ -22,13 +22,13 @@ describe("Dragon testing", () => {
     expect(wrapper.text()).toContain(description);
   });
 
-  it("renders Rocket's basic info from passed data on first page", () => {
+  it("renders Dragons's basic info from passed data on first page", () => {
     const basicInfo = {
       "type": "capsule",
       "crew capacity": "0",
       "first-flight": "2010-12-08"
     };
-
+    
     expect(wrapper.find(".basic-info").text()).toContain(basicInfo.type);
     expect(wrapper.find(".basic-info").text()).toContain(basicInfo["crew capacity"]);
     expect(wrapper.find(".basic-info").text()).toContain(basicInfo["first-flight"]);

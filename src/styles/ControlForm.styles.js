@@ -18,7 +18,7 @@ export const StyledControls= styled.div`
   }
 
   li:hover {
-    color: red;
+    color: #FD5064;
   }
 
 `;
