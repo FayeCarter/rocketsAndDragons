@@ -1,8 +1,8 @@
 import React from "react";
 import { mount } from "enzyme";
-import { singleDragonMock } from "./fixtures/APIMocks";
+import { singleDragonMock } from "../../fixtures/APIMocks";
 
-import Dragon from "../components/Dragon";
+import Dragon from "../Dragon";
 
 describe("Dragon testing", () => {
 

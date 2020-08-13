@@ -1,8 +1,8 @@
 import React from "react";
 import { mount } from "enzyme";
-import { singleRocketMock } from "./fixtures/APIMocks";
+import { singleRocketMock } from "../../fixtures/APIMocks";
 
-import Rocket from "../components/Rocket";
+import Rocket from "../Rocket";
 
 describe("Rocket testing", () => {
 
@@ -35,7 +35,6 @@ describe("Rocket testing", () => {
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo["first-flight"]);
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo.cost);
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo.success);
-  
     });
   
     xit("Renders Rocket's dimensions from passed data", () => {

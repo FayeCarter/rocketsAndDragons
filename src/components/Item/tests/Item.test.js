@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { singleRocketMock } from "../../../tests/fixtures/APIMocks";
+import { singleRocketMock } from "../../fixtures/APIMocks";
 
 import Item from "../Item";
 

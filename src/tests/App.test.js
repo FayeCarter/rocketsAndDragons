@@ -10,7 +10,7 @@ import {
   rocketsMock, 
   dragonsMock, 
   singleDragonMock 
-} from './fixtures/APIMocks';
+} from '../components/fixtures/APIMocks';
 
 jest.mock('axios');
 
