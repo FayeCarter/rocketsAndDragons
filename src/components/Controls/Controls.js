@@ -3,7 +3,7 @@ import { Icon } from "@mrshmllw/smores-react";
 
 import { StyledControls } from "./styles/Control.styles";
 
-function ControlForm({ titles, currentPage, setCurrentPage }) {
+function Controls({ titles, currentPage, setCurrentPage }) {
 
   const changePage = (direction) => {
     if (direction === "up" && currentPage < titles.length - 1) {
@@ -58,4 +58,4 @@ function ControlForm({ titles, currentPage, setCurrentPage }) {
   );
 };
 
-export default ControlForm;
+export default Controls;

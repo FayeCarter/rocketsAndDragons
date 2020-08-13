@@ -3,7 +3,7 @@ import { Button } from "@mrshmllw/smores-react";
 
 import { getData } from "./services/API";
 
-import ListItem from "./components/ListItem";
+import ListItem from "./components/Item/Item";
 import Rocket from "./components/Rocket";
 import Dragon from "./components/Dragon";
 

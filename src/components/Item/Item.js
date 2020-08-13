@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Card, Icon, Tag } from "@mrshmllw/smores-react";
 
-import { StyledItem, StyledContainer } from "../styles/Item.styles";
+import { StyledItem, StyledContainer } from "./styles/Item.styles";
 
-function ListItem({ type, data }) {
+function Item({ type, data }) {
 
   const { flickr_images: images } = data;
   const [name, setName] = useState("");
@@ -56,4 +56,4 @@ function ListItem({ type, data }) {
   );
 };
 
-export default ListItem;
+export default Item;

@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 
 import Controls from "../Controls";
 
-describe("ControlForm testing", () => {
+describe("Controls testing", () => {
 
   let wrapper;
 

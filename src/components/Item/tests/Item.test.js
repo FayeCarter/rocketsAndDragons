@@ -1,16 +1,16 @@
 import React from "react";
 import { mount } from "enzyme";
-import { singleRocketMock } from "./fixtures/APIMocks";
+import { singleRocketMock } from "../../../tests/fixtures/APIMocks";
 
-import ListItem from "../components/ListItem";
+import Item from "../Item";
 
-describe("ListItem testing", () => {
+describe("Item testing", () => {
 
   let wrapper;
 
   beforeEach(() => {
     const data = singleRocketMock;
-    wrapper = mount(<ListItem type="rockets" data={data} />);
+    wrapper = mount(<Item type="rockets" data={data} />);
   });
 
   it("Renders Item's passed name", () => {
