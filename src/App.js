@@ -7,7 +7,7 @@ import ListItem from "./components/ListItem";
 import Rocket from "./components/Rocket";
 import Dragon from "./components/Dragon";
 
-import { GlobalStyle, StyledApp, StyledResults } from './styles/App.styles';
+import { GlobalStyle, StyledApp, StyledResults, StyledList } from './styles/App.styles';
 
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
         </Button>
       </div>
       <StyledResults>
-        <div>
+        <StyledList>
           {data.map((item, index) => {
             return (
               <div 
@@ -63,9 +63,11 @@ function App() {
               </div>
             )
           })}
-        </div>
-      { clicked && vehicle === "rockets" ? <Rocket data={ item } /> : null}
-      { clicked && vehicle === "dragons" ? <Dragon data={ item } /> : null}
+        </ StyledList>
+        <div>
+          { clicked && vehicle === "rockets" ? <Rocket data={ item } /> : null}
+          { clicked && vehicle === "dragons" ? <Dragon data={ item } /> : null}
+        </ div>
       </ StyledResults>
     </ StyledApp>
   );

@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const StyledItem= styled.div`
 
-padding-bottom: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  width: 100%;
 
   h2 {
     text-align: center;
@@ -16,7 +18,6 @@ padding-bottom: 20px;
     object-fit: cover;
     height: 250px;
     max-width: 100%;
-
   }
 
   span {

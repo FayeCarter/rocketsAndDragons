@@ -13,7 +13,7 @@ function ListItem({ type, data }) {
   }, [name]);
 
   const scrollToTop = ()  => {
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   return (

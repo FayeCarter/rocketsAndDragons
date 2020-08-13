@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card } from "@mrshmllw/smores-react";
 import InfoSheet from './InfoSheet';
 import ControlForm from './ControlForm';
-
+import { StyledVehicle } from '../styles/Vehicle.styles';
 function Rocket({ data }) {
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -51,7 +51,7 @@ function Rocket({ data }) {
   };
 
   return (
-    <div>
+    <StyledVehicle>
       <Card 
         maxWidth="700px" 
         marginY="20px" 
@@ -68,7 +68,7 @@ function Rocket({ data }) {
         { pages[currentPage] === "Dimensions" ? <InfoSheet type={"dimensions"} data={dimensions} /> : null }
         { pages[currentPage] === "Engines" ? <InfoSheet type={"engine"} data={engineData} /> : null }
       </Card>
-    </ div>
+    </ StyledVehicle>
   );
 }
 
