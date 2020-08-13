@@ -22,4 +22,8 @@ export const StyledControls= styled.div`
     text-decoration: underline;
   }
 
+  .clicked {
+    color: #FD5064;
+  }
+
 `;
