@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledControls= styled.div`
   display: flex;
@@ -31,6 +31,4 @@ export const StyledControls= styled.div`
       fill: #FF7695;
     }
   }
-
-
 `;

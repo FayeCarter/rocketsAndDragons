@@ -1,6 +1,6 @@
 import React from "react";
-import { mount } from 'enzyme';
-import { singleDragonMock } from './fixtures/APIMocks';
+import { mount } from "enzyme";
+import { singleDragonMock } from "./fixtures/APIMocks";
 
 import Dragon from "../components/Dragon";
 
@@ -11,18 +11,18 @@ describe("Dragon testing", () => {
   beforeEach(() => {
     const data = singleDragonMock;
     wrapper = mount(<Dragon data={data} />);
-  })
+  });
 
-  it("renders Dragon's passed name", () => {
+  it("Renders Dragon's passed name", () => {
     expect(wrapper.text()).toContain("Dragon 1");
   });
 
-  it("renders Dragon's passed description", () => {
+  it("Renders Dragon's passed description", () => {
     const description = "Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California";
     expect(wrapper.text()).toContain(description);
   });
 
-  it("renders Dragons's basic info from passed data on first page", () => {
+  it("Renders Dragons's basic info from passed data on first page", () => {
     const basicInfo = {
       "type": "capsule",
       "crew capacity": "0",

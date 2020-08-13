@@ -1,5 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -55,4 +54,3 @@ export const StyledList = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-

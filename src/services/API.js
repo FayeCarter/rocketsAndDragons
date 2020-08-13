@@ -5,5 +5,4 @@ export const getData = async(vehicle) => {
   const response = await axios.get(path + vehicle)
   const result = JSON.stringify(response.data)
   return JSON.parse(result)
-
-}
+};

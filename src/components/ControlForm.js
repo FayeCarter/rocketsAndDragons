@@ -1,15 +1,16 @@
 import React from "react";
 import { Icon } from "@mrshmllw/smores-react";
-import { StyledControls } from '../styles/ControlForm.styles';
 
-function ControlForm({titles, currentPage, setCurrentPage}) {
+import { StyledControls } from "../styles/ControlForm.styles";
+
+function ControlForm({ titles, currentPage, setCurrentPage }) {
 
   const changePage = (direction) => {
     if (direction === "up" && currentPage < titles.length - 1) {
       setCurrentPage(currentPage + 1);
     } else if (direction === "down" && currentPage > 0) {
       setCurrentPage(currentPage - 1);
-    }
+    };
   };
 
   const handleClick = (page) => {
@@ -17,7 +18,7 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
   };
 
   return (
-    <StyledControls className="control-form">
+    <StyledControls className="control-form" >
       <div 
         className="left-arrow"
         onClick={() => changePage("down")}
@@ -28,7 +29,7 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
           size={38}
         />
       </div>
-      <ul className="pages">
+      <ul className="pages" >
         { titles.map((page, index) => {
             return (
               <li 
@@ -55,6 +56,6 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
       </div>
     </StyledControls>
   );
-}
+};
 
 export default ControlForm;

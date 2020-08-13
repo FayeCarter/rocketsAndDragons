@@ -1,7 +1,7 @@
 import React from "react";
 import { LabelledText } from "@mrshmllw/smores-react";
 
-import { StyledInfoSheet } from '../styles/InfoSheet.styled';
+import { StyledInfoSheet } from "../styles/InfoSheet.styled";
 
 function InfoSheet({ type, data }) {
 
@@ -11,8 +11,8 @@ function InfoSheet({ type, data }) {
         {Object.entries(data).map(([key, value], index) => {
           return (
             <LabelledText
-              key={index} 
-              label={key}
+              key={ index } 
+              label={ key }
             >
               { value }
             </LabelledText>
@@ -21,6 +21,6 @@ function InfoSheet({ type, data }) {
       </ StyledInfoSheet>
     </div>
   );
-}
+};
 
 export default InfoSheet;

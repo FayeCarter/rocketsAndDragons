@@ -1,6 +1,6 @@
 import React from "react";
-import { mount } from 'enzyme';
-import { singleRocketMock } from './fixtures/APIMocks';
+import { mount } from "enzyme";
+import { singleRocketMock } from "./fixtures/APIMocks";
 
 import Rocket from "../components/Rocket";
 
@@ -11,19 +11,19 @@ describe("Rocket testing", () => {
   beforeEach(() => {
     const data = singleRocketMock;
     wrapper = mount(<Rocket data={data} />);
-  })
+  });
 
-  it("renders Rocket's passed name", () => {
+  it("Renders Rocket's passed name", () => {
     expect(wrapper.text()).toContain("The Falcon 1");
   });
 
-  it("renders Rocket's passed description", () => {
+  it("Renders Rocket's passed description", () => {
     const description = "The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009.";
     expect(wrapper.text()).toContain(description);
   });
 
   describe('Rendered Info', () => {
-    it("renders Rocket's basic info from passed data on first page", () => {
+    it("Renders Rocket's basic info from passed data on first page", () => {
       const basicInfo = {
         "country": "Republic of the Marshall Islands",
         "first-flight": "2006-03-24",
@@ -38,7 +38,7 @@ describe("Rocket testing", () => {
   
     });
   
-    xit("renders Rocket's dimensions from passed data", () => {
+    xit("Renders Rocket's dimensions from passed data", () => {
       const dimensions = {
         "height": "22.25",
         "diameter": "1.68",
@@ -50,7 +50,7 @@ describe("Rocket testing", () => {
       expect(wrapper.find(".dimensions").text()).toContain(dimensions.mass);
     });
   
-    xit("renders Rocket's engine information from passed data", () => {
+    xit("Renders Rocket's engine information from passed data", () => {
       const engine = {
         "engines": "1",
         "type": "merlin",

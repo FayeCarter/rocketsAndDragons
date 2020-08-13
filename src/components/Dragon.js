@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "@mrshmllw/smores-react";
-import InfoSheet from './InfoSheet';
-import ControlForm from './ControlForm';
+import InfoSheet from "./InfoSheet";
+import ControlForm from "./ControlForm";
 
 function Dragon({ data }) {
 
@@ -72,6 +72,6 @@ function Dragon({ data }) {
       </Card>
     </div>
   );
-}
+};
 
 export default Dragon;

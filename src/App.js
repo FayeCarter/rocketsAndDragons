@@ -7,7 +7,12 @@ import ListItem from "./components/ListItem";
 import Rocket from "./components/Rocket";
 import Dragon from "./components/Dragon";
 
-import { GlobalStyle, StyledApp, StyledResults, StyledList } from './styles/App.styles';
+import { 
+  GlobalStyle, 
+  StyledApp, 
+  StyledResults, 
+  StyledList 
+} from './styles/App.styles';
 
 function App() {
 
@@ -23,7 +28,7 @@ function App() {
       const data = await getData(selected);
       setVehicle(selected);
       setData(data);
-    }
+    };
   };
 
   const handleClick = (passedItem) => {
@@ -35,7 +40,12 @@ function App() {
     <StyledApp className="App">
       <GlobalStyle />
       <h1>Rockets and Dragons</h1>
-      { data.length === 0  ? <div className="load-message">Click below to view the SpaceX fleet</div> : null}
+      { data.length === 0  ? 
+        <div className="load-message">
+          Click below to view the SpaceX fleet
+        </div> 
+        : null
+      }
       <div className="controls">
         <Button 
           color="green"
@@ -68,12 +78,18 @@ function App() {
           })}
         </ StyledList>
         <div>
-          { clicked && vehicle === "rockets" ? <Rocket data={ item } /> : null}
-          { clicked && vehicle === "dragons" ? <Dragon data={ item } /> : null}
-        </ div>
+          { clicked && vehicle === "rockets" ? 
+            <Rocket data={ item } /> 
+            : null
+          }
+          { clicked && vehicle === "dragons" ? 
+            <Dragon data={ item } /> 
+            : null
+          }
+        </div>
       </ StyledResults>
     </ StyledApp>
   );
-}
+};
 
 export default App;

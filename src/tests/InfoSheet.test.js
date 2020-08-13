@@ -1,11 +1,11 @@
 import React from "react";
-import { mount } from 'enzyme';
+import { mount } from "enzyme";
 
 import InfoSheet from "../components/InfoSheet";
 
 describe("InfoSheet testing", () => {
 
-  it("renders InfoSheets's passed description", () => {
+  it("Renders InfoSheets's passed description", () => {
 
     const data = {
       "first flight": "2012-05-12",
@@ -17,5 +17,4 @@ describe("InfoSheet testing", () => {
     expect(wrapper.text()).toContain(data["first flight"]);
     expect(wrapper.text()).toContain(data.country);
   });
-
 });

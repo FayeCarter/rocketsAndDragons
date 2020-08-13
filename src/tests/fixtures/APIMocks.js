@@ -224,7 +224,7 @@ export const rocketsMock = {
       "rocket_type":"rocket"
     }
   ]
-}
+};
 
 export const dragonsMock = {
   "data":[
@@ -400,7 +400,7 @@ export const dragonsMock = {
       "description":"Dragon 2 (also Crew Dragon, Dragon V2, or formerly DragonRider) is the second version of the SpaceX Dragon spacecraft, which will be a human-rated vehicle. It includes a set of four side-mounted thruster pods with two SuperDraco engines each, which can serve as a launch escape system or launch abort system (LAS). In addition, it has much larger windows, new flight computers and avionics, and redesigned solar arrays, and a modified outer mold line from the initial cargo Dragon that has been flying for several years."
     }
   ]
-}
+};
 
 export const singleRocketMock = {
   "id":1,

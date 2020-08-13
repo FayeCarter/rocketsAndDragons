@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledItem = styled.div`
 
@@ -47,5 +47,4 @@ export const StyledContainer = styled.div`
       background-color: #f2f2f2;
     }
   }
-    
 `;

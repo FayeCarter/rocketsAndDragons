@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Card } from "@mrshmllw/smores-react";
-import InfoSheet from './InfoSheet';
-import ControlForm from './ControlForm';
-import { StyledVehicle } from '../styles/Vehicle.styles';
+
+import InfoSheet from "./InfoSheet";
+import ControlForm from "./ControlForm";
+
+import { StyledVehicle } from "../styles/Vehicle.styles";
+
 function Rocket({ data }) {
 
   const [currentPage, setCurrentPage] = useState(0);
-  const pages = ["Basic Info", "Dimensions", "Engines"]
-
+  const pages = ["Basic Info", "Dimensions", "Engines"];
 
   const {
     rocket_name: name, 
@@ -57,19 +59,19 @@ function Rocket({ data }) {
         marginY="20px" 
         marginX="20px"
       >
-        <h1>{name}</h1>
+        <h1>{ name }</h1>
         <ControlForm 
-          titles={pages} 
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
+          titles={ pages } 
+          currentPage={ currentPage }
+          setCurrentPage={ setCurrentPage }
         />
-        <p>{description}</p>
-        { pages[currentPage] === "Basic Info" ? <InfoSheet type={"basic-info"} data={basicInfo} /> : null }
-        { pages[currentPage] === "Dimensions" ? <InfoSheet type={"dimensions"} data={dimensions} /> : null }
-        { pages[currentPage] === "Engines" ? <InfoSheet type={"engine"} data={engineData} /> : null }
+        <p>{ description }</p>
+        { pages[currentPage] === "Basic Info" ? <InfoSheet type={ "basic-info" } data={ basicInfo } /> : null }
+        { pages[currentPage] === "Dimensions" ? <InfoSheet type={ "dimensions" } data={ dimensions } /> : null }
+        { pages[currentPage] === "Engines" ? <InfoSheet type={ "engine" } data={ engineData } /> : null }
       </Card>
     </ StyledVehicle>
   );
-}
+};
 
 export default Rocket;
