@@ -47,6 +47,17 @@ function Rocket({ data }) {
             { success } %
           </LabelledText>
         </div>
+        <div className="dimensions">
+          <LabelledText label="Height">
+            { height.meters } m
+          </LabelledText>
+          <LabelledText label="Diameter">
+            { diameter.meters } m
+          </LabelledText>
+          <LabelledText label="Mass">
+            { mass.kg } KG
+          </LabelledText>
+        </div> 
       </Card>
     </ div>
   );

@@ -36,4 +36,16 @@ describe("Rocket testing", () => {
     expect(wrapper.find(".basic-info").text()).toContain(basicInfo.success);
 
   });
+
+  it("renders Rocket's dimensions from passed data", () => {
+    const dimensions = {
+      "height": "22.25",
+      "diameter": "1.68",
+      "mass": "30146"
+    }
+
+    expect(wrapper.find(".dimensions").text()).toContain(dimensions.height);
+    expect(wrapper.find(".dimensions").text()).toContain(dimensions.diameter);
+    expect(wrapper.find(".dimensions").text()).toContain(dimensions.mass);
+  });
 });
