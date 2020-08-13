@@ -42,6 +42,9 @@ export const StyledItem = styled.div`
 `;
 
 export const StyledContainer = styled.div`
+
+  min-width: 330px;
+
   &:hover {
     .card {
       background-color: #f2f2f2;

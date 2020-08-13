@@ -3,6 +3,8 @@ import { Card } from "@mrshmllw/smores-react";
 import InfoSheet from "../InfoSheet/InfoSheet";
 import Controls from "../Controls/Controls";
 
+import { StyledVehicle } from "./styles/Vehicle.styles";
+
 function Dragon({ data }) {
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -52,7 +54,7 @@ function Dragon({ data }) {
   };
 
   return (
-    <div>
+    <StyledVehicle>
       <Card 
         maxWidth="700px" 
         marginY="20px" 
@@ -70,7 +72,7 @@ function Dragon({ data }) {
         { pages[currentPage] === "Heat Shield" ? <InfoSheet type={"heat-shield"} data={heatShield} /> : null }
         { pages[currentPage] === "Thrusters" ? <InfoSheet type={"thrusters"} data={thrustersData} /> : null }
       </Card>
-    </div>
+    </StyledVehicle>
   );
 };
 
