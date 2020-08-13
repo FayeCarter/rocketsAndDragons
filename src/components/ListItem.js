@@ -5,7 +5,7 @@ import { StyledItem } from '../styles/Item.styles';
 
 function ListItem({ type, data }) {
 
-  const {description, flickr_images: images} = data;
+  const {flickr_images: images} = data;
   const [name, setName] = useState("")
 
   useEffect(  () => {
@@ -14,10 +14,9 @@ function ListItem({ type, data }) {
 
   return (
     <div >
-      <Card maxWidth="350px" narrow="true" >
+      <Card maxWidth="350px" narrow="true" marginY="20px" marginX="20px">
         <StyledItem>
           <h2>{name}</h2>
-          <p>{description}</p>
           <img src={images[1]} alt="Item" />
           <Icon 
             color="pink6"

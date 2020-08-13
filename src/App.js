@@ -25,10 +25,8 @@ function App() {
   }
 
   const handleClick = (passedItem) => {
-    console.log("Click")
     setClicked(true)
     setItem(passedItem)
-    console.log(vehicle )
   }
 
   return (
@@ -57,8 +55,7 @@ function App() {
                 key={index} 
                 onClick={() => handleClick(item) } 
               >
-                <ListItem 
-                  
+                <ListItem                   
                   className={vehicle}
                   type={vehicle} 
                   data={item}
