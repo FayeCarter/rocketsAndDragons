@@ -16,12 +16,14 @@ function App() {
   const [clicked, setClicked] = useState(false);
   const [item, setItem] = useState(false);
 
-  const getInfo = async (vehicle) => {
-    setClicked(false)
-    setData([]);
-    const data = await getData(vehicle);
-    setVehicle(vehicle);
-    setData(data);
+  const getInfo = async (selected) => {
+    if (selected !== vehicle) {
+      setClicked(false)
+      setData([]);
+      const data = await getData(selected);
+      setVehicle(selected);
+      setData(data);
+    }
   };
 
   const handleClick = (passedItem) => {
@@ -33,6 +35,7 @@ function App() {
     <StyledApp className="App">
       <GlobalStyle />
       <h1>Rockets and Dragons</h1>
+      { data.length === 0  ? <div class="load-message">Click below to view the SpaceX fleet</div> : null}
       <div className="controls">
         <Button 
           color="green"

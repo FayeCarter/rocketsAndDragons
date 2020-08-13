@@ -2,15 +2,27 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 
 export const GlobalStyle = createGlobalStyle`
+
+  html, body {
+    margin: 20px;
+    height: 100%;
+  }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 20px;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center center;
   }
+
 `
 
 export const StyledApp= styled.div`
   display: flex;
   flex-direction: column;
+  margin: auto;
+  height: 100%;
 
   h1 {
     text-align: center;
@@ -23,6 +35,13 @@ export const StyledApp= styled.div`
   button {
     width: 300px;
     margin: 20px;
+  }
+
+  .load-message {
+    color: grey;
+    align-self: center;
+    font-style: italic;
+    padding: 20px 0;
   }
 
 `;

@@ -33,7 +33,7 @@ export const StyledItem= styled.div`
   &:hover {
     span {
       path {
-        fill: #AB1D20;
+        fill: #FF7695;
       }
     }
   }
