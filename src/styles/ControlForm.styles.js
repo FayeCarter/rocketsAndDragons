@@ -19,6 +19,7 @@ export const StyledControls= styled.div`
 
   li:hover {
     color: #FD5064;
+    text-decoration: underline;
   }
 
 `;

@@ -12,8 +12,12 @@ function ListItem({ type, data }) {
     type === "rockets" ? setName(data.rocket_name) : setName(data.name);
   }, [name]);
 
+  const scrollToTop = ()  => {
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
-    <div >
+    <div onClick={scrollToTop}>
       <Card maxWidth="350px" narrow="true" marginY="20px" marginX="20px">
         <StyledItem>
           <h2>{name}</h2>
