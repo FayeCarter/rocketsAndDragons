@@ -36,7 +36,7 @@ function Rocket({ data }) {
   };
 
   const engineData = {
-    "number of engines": engines.engines,
+    "number of engines": engines.number,
     "type": engines.type,
     "version": engines.version,
     "layout": engines.layout,
