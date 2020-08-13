@@ -14,7 +14,7 @@ function InfoSheet({ type, data }) {
               key={ index } 
               label={ key }
             >
-              { value }
+              { value ? value : "NA" }
             </LabelledText>
           )
         })}
