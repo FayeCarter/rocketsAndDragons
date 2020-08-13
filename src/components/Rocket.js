@@ -52,7 +52,11 @@ function Rocket({ data }) {
 
   return (
     <div>
-      <Card maxWidth="700px" marginY="20px" marginX="20px">
+      <Card 
+        maxWidth="700px" 
+        marginY="20px" 
+        marginX="20px"
+      >
         <h1>{name}</h1>
         <ControlForm 
           titles={pages} 

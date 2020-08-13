@@ -53,7 +53,11 @@ function Dragon({ data }) {
 
   return (
     <div>
-      <Card>
+      <Card 
+        maxWidth="700px" 
+        marginY="20px" 
+        marginX="20px"
+      >
         <h1>{name}</h1>
         <ControlForm 
           titles={pages} 
