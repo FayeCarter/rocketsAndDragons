@@ -28,7 +28,6 @@ describe("Dragon testing", () => {
       "crew capacity": "0",
       "first-flight": "2010-12-08"
     };
-    console.log(basicInfo)
 
     expect(wrapper.find(".basic-info").text()).toContain(basicInfo.type);
     expect(wrapper.find(".basic-info").text()).toContain(basicInfo["crew capacity"]);
