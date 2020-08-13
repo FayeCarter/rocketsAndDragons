@@ -10,7 +10,11 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
     } else if (direction === "down" && currentPage > 0) {
       setCurrentPage(currentPage - 1);
     }
-  }
+  };
+
+  const handleClick = (page) => {
+    setCurrentPage(titles.indexOf(page))
+  };
 
   return (
     <StyledControls className="control-form">
@@ -27,7 +31,10 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
       <ul className="pages">
         { titles.map((page, index) => {
             return (
-              <li key={index}>
+              <li 
+                key={index}
+                onClick={() => handleClick(page)}
+              >
                 {page}
               </li>
             )
