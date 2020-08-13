@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Card, LabelledText } from "@mrshmllw/smores-react";
+import InfoSheet from './InfoSheet';
 
 function Rocket({ data }) {
 
@@ -16,16 +17,11 @@ function Rocket({ data }) {
     engines
   } = data;
 
-  const [page, setPage] = useState(0)
-
-  const titles = ["Basic Info", "Dimensions", "Engine"]
-
-  const changePage = (direction) => {
-    if (direction === "up") {
-      if (page < titles.length) {setPage(page + 1)}
-    } else {
-      if (page > 0) {setPage(page - 1)}
-    }
+  const dimensions = {
+    "info": "dimensions",
+    "height": height.meters,
+    "diameter": diameter.meters,
+    "mass": mass.kg
   }
 
   return (
@@ -47,17 +43,7 @@ function Rocket({ data }) {
             { success } %
           </LabelledText>
         </div>
-        <div className="dimensions">
-          <LabelledText label="Height">
-            { height.meters } m
-          </LabelledText>
-          <LabelledText label="Diameter">
-            { diameter.meters } m
-          </LabelledText>
-          <LabelledText label="Mass">
-            { mass.kg } KG
-          </LabelledText>
-        </div> 
+        <InfoSheet data={dimensions}/>
         <div className="engine">
           <div>
             <LabelledText label="Number of Engines">
