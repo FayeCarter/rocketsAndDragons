@@ -25,13 +25,13 @@ function Rocket({ data }) {
   } = data;
 
   const dimensions = {
-    "height": height.meters,
-    "diameter": diameter.meters,
-    "mass": mass.kg
+    "height": `${height.meters}m`,
+    "diameter": `${diameter.meters}m`,
+    "mass": `${mass.kg}kg`
   };
 
   const basicInfo = {
-    "cost": cost,
+    "cost": `$${cost}`,
     "success": success,
     "first flight": first_flight,
     "country": country
@@ -47,9 +47,9 @@ function Rocket({ data }) {
     "propellant 2": engines.propellant_2,
     "thrust to weight": engines.thrust_to_weight,
     "isp at sea level": engines.isp.sea_level,
-    "thrust at sea level": engines.thrust_sea_level.kN,
+    "thrust at sea level": `${engines.thrust_sea_level.kN}kN`,
     "isp in vacuum": engines.isp.vacuum,
-    "thrust in vacuum": engines.thrust_vacuum.kN,
+    "thrust in vacuum": `${engines.thrust_vacuum.kN}kN`,
   };
 
   return (

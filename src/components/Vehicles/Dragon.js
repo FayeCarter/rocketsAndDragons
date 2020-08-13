@@ -29,16 +29,16 @@ function Dragon({ data }) {
   };
 
   const dimensions = {
-    "diameter": diameter.meters,
-    "trunk": trunk.trunk_volume.cubic_meters,
-    "full height": full_height.meters,
-    "mass": mass
+    "diameter": `${diameter.meters}m`,
+    "trunk": `${trunk.trunk_volume.cubic_meters}m³`,
+    "full height": `${full_height.meters}m`,
+    "mass": `${mass}kg`
   };
 
   const heatShield = {
     "material": heat_shield.material,
-    "size": heat_shield.size_meters,
-    "temperature": heat_shield.temp_degrees,
+    "size": `${heat_shield.size_meters}m`,
+    "temperature": `${heat_shield.temp_degrees} degrees`,
     "development partner": heat_shield.dev_partner,
   };
 
@@ -48,7 +48,7 @@ function Dragon({ data }) {
     "pods": thrusters[0].pods,
     "fuels": `${thrusters[0].fuel_1} and ${thrusters[0].fuel_2}`,
     "isp": thrusters[0].isp,
-    "thrust": thrusters[0].thrust.kN
+    "thrust": `${thrusters[0].thrust.kN}kN`
   };
 
   return (
