@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "@mrshmllw/smores-react";
 import InfoSheet from './InfoSheet';
 import ControlForm from './ControlForm';
 
 function Rocket({ data }) {
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const pages = ["Basic Info", "Dimensions", "Engines"]
+
 
   const {
     rocket_name: name, 
@@ -46,17 +50,19 @@ function Rocket({ data }) {
     "thrust in vacuum": engines.thrust_vacuum.kN,
   }
 
-  const pages = ["Basic Info", "Dimensions", "Engines"]
-
   return (
     <div>
       <Card maxWidth="700px" marginY="20px" marginX="20px">
         <h1>{name}</h1>
-        <ControlForm titles={pages} />
+        <ControlForm 
+          titles={pages} 
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
         <p>{description}</p>
-        <InfoSheet type="basic-info" data={basicInfo}/>
-        <InfoSheet type="dimensions" data={dimensions}/>
-        <InfoSheet type="engines" data={engineData}/>
+        { pages[currentPage] === "Basic Info" ? <InfoSheet type={"basic-info"} data={basicInfo} /> : null }
+        { pages[currentPage] === "Dimensions" ? <InfoSheet type={"dimensions"} data={dimensions} /> : null }
+        { pages[currentPage] === "Engines" ? <InfoSheet type={"engine"} data={engineData} /> : null }
       </Card>
     </ div>
   );

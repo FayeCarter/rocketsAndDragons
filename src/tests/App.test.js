@@ -5,7 +5,7 @@ import waitUntil from 'async-wait-until';
 import { act } from 'react-dom/test-utils';
 
 import App from "../App";
-import Rocket from "../components/Rocket";
+
 import { rocketsMock, dragonsMock } from './fixtures/APIMocks';
 
 jest.mock('axios');

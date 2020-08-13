@@ -11,10 +11,10 @@ import { GlobalStyle, StyledApp, StyledResults } from './styles/App.styles';
 
 function App() {
 
-  const [data, setData] = useState([])
-  const [vehicle, setVehicle] = useState("")
-  const [clicked, setClicked] = useState(false)
-  const [item, setItem] = useState(false)
+  const [data, setData] = useState([]);
+  const [vehicle, setVehicle] = useState("");
+  const [clicked, setClicked] = useState(false);
+  const [item, setItem] = useState(false);
 
   const getInfo = async (vehicle) => {
     setClicked(false)
@@ -22,12 +22,12 @@ function App() {
     const data = await getData(vehicle);
     setVehicle(vehicle);
     setData(data);
-  }
+  };
 
   const handleClick = (passedItem) => {
     setClicked(true)
     setItem(passedItem)
-  }
+  };
 
   return (
     <StyledApp className="App">
