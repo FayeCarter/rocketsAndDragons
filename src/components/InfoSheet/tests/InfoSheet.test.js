@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import InfoSheet from "../components/InfoSheet";
+import InfoSheet from "../InfoSheet";
 
 describe("InfoSheet testing", () => {
 

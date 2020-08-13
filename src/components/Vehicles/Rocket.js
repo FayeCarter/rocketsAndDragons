@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "@mrshmllw/smores-react";
 
-import InfoSheet from "../InfoSheet";
+import InfoSheet from "../InfoSheet/InfoSheet";
 import Controls from "../Controls/Controls";
 
 import { StyledVehicle } from "./styles/Vehicle.styles";

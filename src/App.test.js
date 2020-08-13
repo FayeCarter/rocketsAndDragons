@@ -4,13 +4,13 @@ import { mount } from "enzyme";
 import waitUntil from "async-wait-until";
 import { act } from "react-dom/test-utils";
 
-import App from "../App";
+import App from "./App";
 
 import { 
   rocketsMock, 
   dragonsMock, 
   singleDragonMock 
-} from '../components/fixtures/APIMocks';
+} from './components/fixtures/APIMocks';
 
 jest.mock('axios');
 

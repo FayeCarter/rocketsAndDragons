@@ -1,7 +1,7 @@
 import React from "react";
 import { LabelledText } from "@mrshmllw/smores-react";
 
-import { StyledInfoSheet } from "../styles/InfoSheet.styled";
+import { StyledInfoSheet } from "./styles/InfoSheet.styled";
 
 function InfoSheet({ type, data }) {
 

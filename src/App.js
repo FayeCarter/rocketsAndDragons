@@ -12,7 +12,7 @@ import {
   StyledApp, 
   StyledResults, 
   StyledList 
-} from './styles/App.styles';
+} from './App.styles';
 
 function App() {
 
