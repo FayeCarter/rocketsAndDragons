@@ -30,7 +30,7 @@ function Rocket({ data }) {
     "country": country
   }
 
-  const engin = {
+  const engineData = {
     "number of engines": engines.engines,
     "type": engines.type,
     "version": engines.version,
@@ -52,7 +52,7 @@ function Rocket({ data }) {
         <p>{description}</p>
         <InfoSheet type="basic-info" data={basicInfo}/>
         <InfoSheet type="dimensions" data={dimensions}/>
-        <InfoSheet type="engines" data={engin}/>
+        <InfoSheet type="engines" data={engineData}/>
       </Card>
     </ div>
   );
