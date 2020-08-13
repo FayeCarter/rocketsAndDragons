@@ -26,14 +26,14 @@ function Rocket({ data }) {
     "height": height.meters,
     "diameter": diameter.meters,
     "mass": mass.kg
-  }
+  };
 
   const basicInfo = {
     "cost": cost,
     "success": success,
     "first flight": first_flight,
     "country": country
-  }
+  };
 
   const engineData = {
     "number of engines": engines.engines,
@@ -48,7 +48,7 @@ function Rocket({ data }) {
     "thrust at sea level": engines.thrust_sea_level.kN,
     "isp in vacuum": engines.isp.vacuum,
     "thrust in vacuum": engines.thrust_vacuum.kN,
-  }
+  };
 
   return (
     <div>
