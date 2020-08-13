@@ -2,7 +2,7 @@
 
 Application is deployed [**here**](http://rockets-and-dragons.surge.sh/)
 
-<img src="./images/app.gif" width="400" />
+<img src="./images/app.gif" width="600" />
 
 ## Specification
 
