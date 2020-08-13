@@ -10,7 +10,7 @@ function ListItem({ type, data }) {
 
   useEffect(  () => {
     type === "rockets" ? setName(data.rocket_name) : setName(data.name);
-  }, [name]);
+  }, [type, data.rocket_name, data.name]);
 
   const scrollToTop = ()  => {
     window.scrollTo({top: 0, behavior: "smooth"});

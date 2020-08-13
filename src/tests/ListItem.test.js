@@ -11,7 +11,7 @@ describe("ListItem testing", () => {
   beforeEach(() => {
     const data = singleRocketMock;
     wrapper = mount(<ListItem type="rockets" data={data} />);
-  })
+  });
 
   it("Renders Item's passed name", () => {
     expect(wrapper.find("h2").text()).toEqual("Falcon 1");
