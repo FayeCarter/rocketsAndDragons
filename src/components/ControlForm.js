@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@mrshmllw/smores-react";
 
-function ControlForm() {
+function ControlForm({titles}) {
 
   return (
     <div className="control-form">
@@ -12,6 +12,16 @@ function ControlForm() {
           size={38}
         />
       </div>
+      <ul className="pages">
+        { titles.map((page, index) => {
+            return (
+              <li key={index}>
+                {page}
+              </li>
+            )
+          })
+        }
+      </ul>
       <div className="right-arrow">
         <Icon 
           color="pink6"

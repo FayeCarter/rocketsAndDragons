@@ -46,11 +46,13 @@ function Rocket({ data }) {
     "thrust in vacuum": engines.thrust_vacuum.kN,
   }
 
+  const pages = ["Basic Info", "Dimensions", "Engines"]
+
   return (
     <div>
       <Card maxWidth="700px" marginY="20px" marginX="20px">
         <h1>{name}</h1>
-        <ControlForm />
+        <ControlForm titles={pages} />
         <p>{description}</p>
         <InfoSheet type="basic-info" data={basicInfo}/>
         <InfoSheet type="dimensions" data={dimensions}/>
