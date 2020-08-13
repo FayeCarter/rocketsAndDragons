@@ -29,4 +29,13 @@ export const StyledApp= styled.div`
 
 export const StyledResults= styled.div`
   display: flex;
+  justify-content: center;
+  width: 90%;
+  padding-top: 40px;
 `;
+
+export const StyledList= styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+

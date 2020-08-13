@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Card, Icon } from "@mrshmllw/smores-react";
+import { Card, Icon, Tag } from "@mrshmllw/smores-react";
 
-import { StyledItem } from '../styles/Item.styles';
+import { StyledItem, StyledContainer } from '../styles/Item.styles';
 
 function ListItem({ type, data }) {
 
@@ -17,11 +17,27 @@ function ListItem({ type, data }) {
   }
 
   return (
-    <div onClick={scrollToTop}>
-      <Card maxWidth="350px" narrow="true" marginY="20px" marginX="20px">
+    <StyledContainer onClick={scrollToTop}>
+      <Card className="card" maxWidth="350px" narrow="true" marginY="20px" marginX="20px">
         <StyledItem>
           <h2>{name}</h2>
           <img src={images[1]} alt="Item" />
+          <div className="tags">
+            <Tag
+              bgColor="green5"
+              borderColor="green7"
+              className=""
+              color="white"
+              label={`first flight: ${data.first_flight}`}
+            />
+            <Tag
+              bgColor="green5"
+              borderColor="green7"
+              className=""
+              color="white"
+              label={`active: ${data.active}`}
+            />
+          </div>
           <Icon 
             color="pink6"
             render="arrow"
@@ -30,7 +46,7 @@ function ListItem({ type, data }) {
           />
         </StyledItem>
       </Card>
-    </div>
+    </StyledContainer>
   );
 }
 

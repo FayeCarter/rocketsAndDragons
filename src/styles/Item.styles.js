@@ -24,6 +24,12 @@ export const StyledItem= styled.div`
     float: right;
   }
 
+  .tags {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+  }
+
   &:hover {
     span {
       path {
@@ -31,4 +37,13 @@ export const StyledItem= styled.div`
       }
     }
   }
+`;
+
+export const StyledContainer = styled.div`
+  &:hover {
+    .card {
+      background-color: #f2f2f2;
+    }
+  }
+    
 `;
