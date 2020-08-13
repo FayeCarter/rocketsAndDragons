@@ -1,10 +1,10 @@
 import React from "react";
 import { LabelledText } from "@mrshmllw/smores-react";
 
-function InfoSheet({ data }) {
+function InfoSheet({ type, data }) {
 
   return (
-    <div className={data.info}>
+    <div className={type}>
       {Object.entries(data).map(([key, value], index) => {
         return (
           <LabelledText

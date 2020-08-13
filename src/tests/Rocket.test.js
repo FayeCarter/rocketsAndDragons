@@ -65,17 +65,17 @@ describe("Rocket testing", () => {
       "thrust-vacuum": "480"
     }
 
-    expect(wrapper.find(".engine").text()).toContain(engine.engines);
-    expect(wrapper.find(".engine").text()).toContain(engine.type);
-    expect(wrapper.find(".engine").text()).toContain(engine.version);
-    expect(wrapper.find(".engine").text()).toContain(engine.layout);
-    expect(wrapper.find(".engine").text()).toContain(engine["engine-loss"]);
-    expect(wrapper.find(".engine").text()).toContain(engine.propellant1);
-    expect(wrapper.find(".engine").text()).toContain(engine.propellant2);
-    expect(wrapper.find(".engine").text()).toContain(engine["thrust-2-weight"]);
-    expect(wrapper.find(".engine").text()).toContain(engine["ips-sea"]);
-    expect(wrapper.find(".engine").text()).toContain(engine["thrust-sea"]);
-    expect(wrapper.find(".engine").text()).toContain(engine["ips-vacuum"]);
-    expect(wrapper.find(".engine").text()).toContain(engine["thrust-vacuum"]);
+    expect(wrapper.find(".engines").text()).toContain(engine.engines);
+    expect(wrapper.find(".engines").text()).toContain(engine.type);
+    expect(wrapper.find(".engines").text()).toContain(engine.version);
+    expect(wrapper.find(".engines").text()).toContain(engine.layout);
+    expect(wrapper.find(".engines").text()).toContain(engine["engine-loss"]);
+    expect(wrapper.find(".engines").text()).toContain(engine.propellant1);
+    expect(wrapper.find(".engines").text()).toContain(engine.propellant2);
+    expect(wrapper.find(".engines").text()).toContain(engine["thrust-2-weight"]);
+    expect(wrapper.find(".engines").text()).toContain(engine["ips-sea"]);
+    expect(wrapper.find(".engines").text()).toContain(engine["thrust-sea"]);
+    expect(wrapper.find(".engines").text()).toContain(engine["ips-vacuum"]);
+    expect(wrapper.find(".engines").text()).toContain(engine["thrust-vacuum"]);
   });
 });
