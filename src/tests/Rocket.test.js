@@ -13,7 +13,6 @@ describe("Rocket testing", () => {
     wrapper = mount(<Rocket data={data} />);
   })
 
-
   it("renders Rocket's passed name", () => {
     expect(wrapper.text()).toContain("The Falcon 1");
   });
@@ -23,4 +22,18 @@ describe("Rocket testing", () => {
     expect(wrapper.text()).toContain(description);
   });
 
+  it("renders Rocket's basic info from passed data", () => {
+    const basicInfo = {
+      "country": "Republic of the Marshall Islands",
+      "first-flight": "2006-03-24",
+      "cost": "6700000",
+      "success": "40"
+    }
+
+    expect(wrapper.text()).toContain(basicInfo.country);
+    expect(wrapper.text()).toContain(basicInfo["first-flight"]);
+    expect(wrapper.text()).toContain(basicInfo.cost);
+    expect(wrapper.text()).toContain(basicInfo.success);
+
+  });
 });
