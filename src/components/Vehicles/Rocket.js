@@ -32,7 +32,7 @@ function Rocket({ data }) {
 
   const basicInfo = {
     "cost": `$${cost}`,
-    "success": `${success}%$`,
+    "success": `${success}%`,
     "first flight": first_flight,
     "country": country
   };
