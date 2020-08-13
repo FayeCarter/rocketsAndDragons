@@ -17,7 +17,7 @@ describe("ControlForm testing", () => {
     expect(wrapper.html()).toContain("right-arrow");
   });
 
-  it("renders passed page ttitles", () => {
+  it("renders passed page titles", () => {
     expect(wrapper.text()).toContain("page 1");
     expect(wrapper.text()).toContain("page 2");
     expect(wrapper.text()).toContain("page 3");

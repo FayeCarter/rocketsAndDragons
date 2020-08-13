@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@mrshmllw/smores-react";
+import { StyledControls } from '../styles/ControlForm.styles';
 
 function ControlForm({titles, currentPage, setCurrentPage}) {
 
@@ -12,7 +13,7 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
   }
 
   return (
-    <div className="control-form">
+    <StyledControls className="control-form">
       <div 
         className="left-arrow"
         onClick={() => changePage("down")}
@@ -44,7 +45,7 @@ function ControlForm({titles, currentPage, setCurrentPage}) {
           size={38}
         />
       </div>
-    </div>
+    </StyledControls>
   );
 }
 
