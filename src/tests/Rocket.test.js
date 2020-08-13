@@ -48,4 +48,34 @@ describe("Rocket testing", () => {
     expect(wrapper.find(".dimensions").text()).toContain(dimensions.diameter);
     expect(wrapper.find(".dimensions").text()).toContain(dimensions.mass);
   });
+
+  it("renders Rocket's engin information from passed data", () => {
+    const engine = {
+      "engines": "1",
+      "type": "merlin",
+      "version": "1C",
+      "layout": "single",
+      "engine-loss": "0",
+      "propellant1": "liquid oxygen",
+      "propellant2": "RP-1 kerosene",
+      "thrust-2-weight": "96",
+      "ips-sea": "267",
+      "thrust-sea": "420",
+      "ips-vacuum": "304",
+      "thrust-vacuum": "480"
+    }
+
+    expect(wrapper.find(".engine").text()).toContain(engine.engines);
+    expect(wrapper.find(".engine").text()).toContain(engine.type);
+    expect(wrapper.find(".engine").text()).toContain(engine.version);
+    expect(wrapper.find(".engine").text()).toContain(engine.layout);
+    expect(wrapper.find(".engine").text()).toContain(engine["engine-loss"]);
+    expect(wrapper.find(".engine").text()).toContain(engine.propellant1);
+    expect(wrapper.find(".engine").text()).toContain(engine.propellant2);
+    expect(wrapper.find(".engine").text()).toContain(engine["thrust-2-weight"]);
+    expect(wrapper.find(".engine").text()).toContain(engine["ips-sea"]);
+    expect(wrapper.find(".engine").text()).toContain(engine["thrust-sea"]);
+    expect(wrapper.find(".engine").text()).toContain(engine["ips-vacuum"]);
+    expect(wrapper.find(".engine").text()).toContain(engine["thrust-vacuum"]);
+  });
 });
