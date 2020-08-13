@@ -26,4 +26,11 @@ export const StyledControls= styled.div`
     color: #FD5064;
   }
 
+  span:hover {
+    path {
+      fill: #FF7695;
+    }
+  }
+
+
 `;

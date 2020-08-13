@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledItem= styled.div`
+export const StyledItem = styled.div`
 
   padding-bottom: 20px;
   margin: 0;
@@ -16,8 +16,10 @@ export const StyledItem= styled.div`
 
   img {
     object-fit: cover;
-    height: 250px;
+    height: 220px;
     max-width: 100%;
+    border-radius: 5px;
+    padding-bottom: 16px;
   }
 
   span {

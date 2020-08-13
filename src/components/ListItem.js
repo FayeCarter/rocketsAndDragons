@@ -18,7 +18,7 @@ function ListItem({ type, data }) {
 
   return (
     <StyledContainer onClick={scrollToTop}>
-      <Card className="card" maxWidth="350px" narrow="true" marginY="20px" marginX="20px">
+      <Card className="card" maxWidth="330px" narrow="true" marginY="20px" marginX="5px">
         <StyledItem>
           <h2>{name}</h2>
           <img src={images[1]} alt="Item" />

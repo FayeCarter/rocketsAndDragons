@@ -4,7 +4,6 @@ import { StyledControls } from '../styles/ControlForm.styles';
 
 function ControlForm({titles, currentPage, setCurrentPage}) {
 
-  const clickedColor = "green"
   const changePage = (direction) => {
     if (direction === "up" && currentPage < titles.length - 1) {
       setCurrentPage(currentPage + 1);

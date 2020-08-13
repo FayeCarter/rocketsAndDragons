@@ -35,7 +35,7 @@ function App() {
     <StyledApp className="App">
       <GlobalStyle />
       <h1>Rockets and Dragons</h1>
-      { data.length === 0  ? <div class="load-message">Click below to view the SpaceX fleet</div> : null}
+      { data.length === 0  ? <div className="load-message">Click below to view the SpaceX fleet</div> : null}
       <div className="controls">
         <Button 
           color="green"

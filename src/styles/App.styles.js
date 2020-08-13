@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
   html, body {
-    margin: 20px;
+    margin: 10px;
     height: 100%;
   }
 
@@ -15,10 +15,9 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     place-items: center center;
   }
-
 `
 
-export const StyledApp= styled.div`
+export const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -43,17 +42,16 @@ export const StyledApp= styled.div`
     font-style: italic;
     padding: 20px 0;
   }
-
 `;
 
-export const StyledResults= styled.div`
+export const StyledResults = styled.div`
   display: flex;
-  justify-content: center;
-  width: 90%;
+  align-content: center;
+  width:100%;
   padding-top: 40px;
 `;
 
-export const StyledList= styled.div`
+export const StyledList = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
