@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "@mrshmllw/smores-react";
 import InfoSheet from './InfoSheet';
+import ControlForm from './ControlForm';
 
 function Rocket({ data }) {
 
@@ -49,6 +50,7 @@ function Rocket({ data }) {
     <div>
       <Card maxWidth="700px" marginY="20px" marginX="20px">
         <h1>{name}</h1>
+        <ControlForm />
         <p>{description}</p>
         <InfoSheet type="basic-info" data={basicInfo}/>
         <InfoSheet type="dimensions" data={dimensions}/>
