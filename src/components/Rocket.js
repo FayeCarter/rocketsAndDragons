@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card } from "@mrshmllw/smores-react";
 
 import InfoSheet from "./InfoSheet";
-import ControlForm from "./ControlForm";
+import Controls from "./Controls/Controls";
 
 import { StyledVehicle } from "../styles/Vehicle.styles";
 
@@ -60,7 +60,7 @@ function Rocket({ data }) {
         marginX="20px"
       >
         <h1>{ name }</h1>
-        <ControlForm 
+        <Controls 
           titles={ pages } 
           currentPage={ currentPage }
           setCurrentPage={ setCurrentPage }

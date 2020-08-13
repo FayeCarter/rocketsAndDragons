@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@mrshmllw/smores-react";
 
-import { StyledControls } from "../styles/ControlForm.styles";
+import { StyledControls } from "./styles/Control.styles";
 
 function ControlForm({ titles, currentPage, setCurrentPage }) {
 
