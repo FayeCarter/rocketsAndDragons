@@ -29,7 +29,7 @@ describe("Rocket testing", () => {
         "first-flight": "2006-03-24",
         "cost": "6700000",
         "success": "40"
-      }
+      };
 
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo.country);
       expect(wrapper.find(".basic-info").text()).toContain(basicInfo["first-flight"]);
