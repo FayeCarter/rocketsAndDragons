@@ -30,10 +30,10 @@ describe("Rocket testing", () => {
       "success": "40"
     }
 
-    expect(wrapper.text()).toContain(basicInfo.country);
-    expect(wrapper.text()).toContain(basicInfo["first-flight"]);
-    expect(wrapper.text()).toContain(basicInfo.cost);
-    expect(wrapper.text()).toContain(basicInfo.success);
+    expect(wrapper.find(".basic-info").text()).toContain(basicInfo.country);
+    expect(wrapper.find(".basic-info").text()).toContain(basicInfo["first-flight"]);
+    expect(wrapper.find(".basic-info").text()).toContain(basicInfo.cost);
+    expect(wrapper.find(".basic-info").text()).toContain(basicInfo.success);
 
   });
 });

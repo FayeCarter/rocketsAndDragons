@@ -33,18 +33,20 @@ function Rocket({ data }) {
       <Card maxWidth="700px" marginY="20px" marginX="20px">
         <h1>{name}</h1>
         <p>{description}</p>
-        <LabelledText label="Country">
-          { country }
-        </LabelledText>
-        <LabelledText label="First Flight">
-          { first_flight }
-        </LabelledText>
-        <LabelledText label="Cost per Launch">
-          $ { cost }
-        </LabelledText>
-        <LabelledText label="Success Rate">
-          { success } %
-        </LabelledText>
+        <div className="basic-info">
+          <LabelledText label="Country">
+            { country }
+          </LabelledText>
+          <LabelledText label="First Flight">
+            { first_flight }
+          </LabelledText>
+          <LabelledText label="Cost per Launch">
+            $ { cost }
+          </LabelledText>
+          <LabelledText label="Success Rate">
+            { success } %
+          </LabelledText>
+        </div>
       </Card>
     </ div>
   );
