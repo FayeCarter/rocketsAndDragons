@@ -40,11 +40,11 @@ function App() {
     <StyledApp className="App">
       <GlobalStyle />
       <h1>Rockets and Dragons</h1>
-      { data.length === 0  ? 
+      { data.length === 0  &&
         <div className="load-message">
           Click below to view the SpaceX fleet
         </div> 
-        : null
+
       }
       <div className="controls">
         <Button 
@@ -78,14 +78,8 @@ function App() {
           })}
         </ StyledList>
         <div>
-          { clicked && vehicle === "rockets" ? 
-            <Rocket data={ item } /> 
-            : null
-          }
-          { clicked && vehicle === "dragons" ? 
-            <Dragon data={ item } /> 
-            : null
-          }
+          { clicked && vehicle === "rockets" && <Rocket data={ item } /> }
+          { clicked && vehicle === "dragons" && <Dragon data={ item } /> }
         </div>
       </ StyledResults>
     </ StyledApp>

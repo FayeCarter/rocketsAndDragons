@@ -68,10 +68,10 @@ function Dragon({ data }) {
           setCurrentPage={setCurrentPage}
         />
         <p>{description}</p>
-        { pages[currentPage] === "Basic Info" ? <InfoSheet type={"basic-info"} data={basicInfo} /> : null }
-        { pages[currentPage] === "Dimensions" ? <InfoSheet type={"dimensions"} data={dimensions} /> : null }
-        { pages[currentPage] === "Heat Shield" ? <InfoSheet type={"heat-shield"} data={heatShield} /> : null }
-        { pages[currentPage] === "Thrusters" ? <InfoSheet type={"thrusters"} data={thrustersData} /> : null }
+        { pages[currentPage] === "Basic Info" && <InfoSheet type={"basic-info"} data={basicInfo} /> }
+        { pages[currentPage] === "Dimensions" && <InfoSheet type={"dimensions"} data={dimensions} /> }
+        { pages[currentPage] === "Heat Shield" && <InfoSheet type={"heat-shield"} data={heatShield} /> }
+        { pages[currentPage] === "Thrusters" && <InfoSheet type={"thrusters"} data={thrustersData} /> }
       </Card>
     </StyledVehicle>
   );

@@ -66,9 +66,9 @@ function Rocket({ data }) {
           setCurrentPage={ setCurrentPage }
         />
         <p>{ description }</p>
-        { pages[currentPage] === "Basic Info" ? <InfoSheet type={ "basic-info" } data={ basicInfo } /> : null }
-        { pages[currentPage] === "Dimensions" ? <InfoSheet type={ "dimensions" } data={ dimensions } /> : null }
-        { pages[currentPage] === "Engines" ? <InfoSheet type={ "engine" } data={ engineData } /> : null }
+        { pages[currentPage] === "Basic Info" && <InfoSheet type={ "basic-info" } data={ basicInfo } /> }
+        { pages[currentPage] === "Dimensions" && <InfoSheet type={ "dimensions" } data={ dimensions } /> }
+        { pages[currentPage] === "Engines" && <InfoSheet type={ "engine" } data={ engineData } /> }
       </Card>
     </ StyledVehicle>
   );
