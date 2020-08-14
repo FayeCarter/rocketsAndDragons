@@ -57,7 +57,7 @@ function Dragon({ data }) {
   return (
     <StyledVehicle>
       <Card 
-        maxWidth="700px" 
+        maxWidth="650px" 
         marginY="20px" 
         marginX="20px"
       >
